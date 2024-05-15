@@ -113,7 +113,7 @@ public class JobSearch extends BaseApp {
 
         // Verify the text
         if (actualText.equals(expectedText)) {
-            System.out.println("Sorting for latest job search is successfull!");
+            System.out.println("Sorting for new job search is successfull!");
         } else {
             System.out.println("Sorting for latest job search is failed!");
         }

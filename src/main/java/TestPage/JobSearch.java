@@ -33,7 +33,7 @@ public class JobSearch extends BaseApp {
 
     }
 
-    public void JobFilters(String Title, String Location, String jobref, String employer) throws InterruptedException {
+    public void JobFilters() throws InterruptedException {
         Thread.sleep(5000);
         Elementappear(what);
         MoveToElement(what);

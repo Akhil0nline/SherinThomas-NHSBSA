@@ -18,18 +18,33 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.github.javafaker.Faker;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseApp {
 	public static WebDriver driver;
 	public WebDriverWait wait;
 	public Actions Action;
 	public static Connection con;
+	public void start(String url, String path) {
+		WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				driver.manage().deleteAllCookies();
+				driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+				DesiredCapabilities caps = new DesiredCapabilities();
+				// Change resolution
+				caps.setCapability("resolution", "1024x768");
+				driver.manage().window().maximize();
+				driver.get(url);
+	}
 
 	public void teardown() {
 		driver.quit();

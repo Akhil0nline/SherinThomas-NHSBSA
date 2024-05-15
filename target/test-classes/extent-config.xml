@@ -30,7 +30,7 @@
 
         <!-- report name - displayed at top-nav -->
         <reportName>
-            INTERFACE AUTOMATION REPORT
+            NHSBSAAutomation
         </reportName>
 
         <!-- timestamp format -->

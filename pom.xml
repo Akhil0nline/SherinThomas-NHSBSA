@@ -8,7 +8,7 @@
     <artifactId>Test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>InterfaceAutomation</name>
+    <name>NHSBSAAutomation</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +36,7 @@
 				<configuration>
 				<testFailureIgnore>false</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>InterfaceTestNG.xml</suiteXmlFile>
+						<suiteXmlFile>JobSearch.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					 <argLine>
                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -51,7 +51,7 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>integration-test</goal>
+							<goal>NHSBSAAutomation</goal>
 							<goal>verify</goal>
 						</goals>
 					</execution>

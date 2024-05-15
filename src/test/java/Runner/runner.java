@@ -10,7 +10,7 @@ import BasePage.BaseApp;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(features = "./src/test/java/feature", glue = "Stepdefinition", plugin = {
+@CucumberOptions(features = "./src/test/java/Features", glue = "StepDefinition", plugin = {
         "html:target/cucumber-html-report", "json:target/cucumber-reports/cucumber.json",
         "junit:target/cucumber-reports/cucumber.xml",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",

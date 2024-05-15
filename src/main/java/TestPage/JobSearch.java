@@ -99,7 +99,7 @@ public class JobSearch extends BaseApp {
     }
 
     public void SortByLatestDate() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(6000);
         MoveToElement(SortByDate);
         click(SortByDate);
         MoveToElement(SortByNewDate);
